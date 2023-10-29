@@ -162,6 +162,7 @@
 // (()=>{
 //     console.log(`this will never run again`)
 //     var inscribe = 23;
+//     console.log(inscribe)
 // })();
 
 // {const isPrivate = 23;
@@ -222,30 +223,30 @@
 
 // work to do .......
 
-const poll = {
-    question: "What is your favourite programming language?",
-    options: ["0: JavaScript", "1: Python", "2: Rust", "3:C++"],
-    answers: new Array(4).fill(0),
-    regNewAnswer: function(){
-        const answer = Number(prompt(`${this.question} \n ${this.options.join('\n')} \n (Write option number) `))
-        typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++
-        console.log(this.answers)
-       console.log(answer)
-    },
-    displayResult(type='array'){
-        if(type === 'array'){
-            console.log(this.answers)
-        }
-        else{console.log(`poll results are ${this.answers.join(',')}`)}
-    }
-    };
+// const poll = {
+//     question: "What is your favourite programming language?",
+//     options: ["0: JavaScript", "1: Python", "2: Rust", "3:C++"],
+//     answers: new Array(4).fill(0),
+//     regNewAnswer: function(){
+//         const answer = Number(prompt(`${this.question} \n ${this.options.join('\n')} \n (Write option number) `))
+//         typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++
+//         console.log(this.answers)
+//        console.log(answer)
+//     },
+//     displayResult(type='array'){
+//         if(type === 'array'){
+//             console.log(this.answers)
+//         }
+//         else{console.log(`poll results are ${this.answers.join(',')}`)}
+//     }
+//     };
 
-//     Test data for bonus:
-// § Data 1: [5, 2, 3]
-// § Data 2: [1, 5, 3, 9, 6, 1]
-    poll.displayResult.call({answers: [5, 2, 3]}, 'strings')
-    poll.displayResult.call({answers: [1, 5, 3, 9, 6, 1]})
-    document.querySelector('.poll').addEventListener('click', poll.regNewAnswer.bind(poll))
+// //     Test data for bonus:
+// // § Data 1: [5, 2, 3]
+// // § Data 2: [1, 5, 3, 9, 6, 1]
+//     poll.displayResult.call({answers: [5, 2, 3]}, 'strings')
+//     poll.displayResult.call({answers: [1, 5, 3, 9, 6, 1]})
+//     document.querySelector('.poll').addEventListener('click', poll.regNewAnswer.bind(poll))
 
 
 
